@@ -1,0 +1,50 @@
+Time slot   0
+ld_routine
+	Loaded a process at input/proc/s3, PID: 1 PRIO: 0
+Time slot   1
+	CPU 0: Dispatched process  1
+Current vm_freerg_list before finding free vm region:
+Current vm_freerg_list before finding free vm region:
+Region: Start=0, End=512
+	<Process 1> ALLOC region 2: 0 - 512
+Current vm_freerg_list after finding free vm region:
+Time slot   2
+Current vm_freerg_list before finding free vm region:
+Current vm_freerg_list before finding free vm region:
+Region: Start=512, End=1024
+	<Process 1> ALLOC region 1: 512 - 1024
+Current vm_freerg_list after finding free vm region:
+Time slot   3
+	CPU 0: Put process  1 to run queue
+	CPU 0: Dispatched process  1
+Current vm_freerg_list before finding free vm region:
+Current page list: 3 2 1 0 
+Victim page selected for replacement: 0
+Current vm_freerg_list before finding free vm region:
+Region: Start=1024, End=1280
+	<Process 1> ALLOC region 3: 1024 - 1124
+Current vm_freerg_list after finding free vm region:
+Region: Start=1124, End=1280
+Time slot   4
+	<Process 1> WRITE region=1 offset=200 value=123
+print_pgtbl: 0 - 1280
+00000000: c0000000
+00000004: 80000000
+00000008: 80000003
+00000012: 80000002
+00000016: 80000001
+Page 2 is already present in frame 603984496
+Time slot   5
+	CPU 0: Put process  1 to run queue
+	CPU 0: Dispatched process  1
+Page 2 is already present in frame 603984496
+	<Process 1> READ region=1 offset=200 value=123
+print_pgtbl: 0 - 1280
+00000000: c0000000
+00000004: 80000000
+00000008: 80000003
+00000012: 80000002
+00000016: 80000001
+Time slot   6
+	CPU 0: Processed  1 has finished
+	CPU 0 stopped
